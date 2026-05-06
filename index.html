@@ -1,1 +1,473 @@
-<h1>Hello from Naresh Davra</h1>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Resume - Naresh Davra</title>
+        <style>
+            :root {
+                --primary: #2c3e50;
+                --secondary: #34495e;
+                --accent: #3498db;
+                --text: #333;
+                --light-bg: #f4f7f6;
+                --white: #ffffff;
+                --border: #e0e0e0;
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: var(--text);
+                background-color: var(--light-bg);
+                padding: 40px 20px;
+            }
+
+            .resume-container {
+                max-width: 1000px;
+                margin: 0 auto;
+                background: var(--white);
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                display: grid;
+                grid-template-columns: 320px 1fr;
+            }
+
+            /* Sidebar Styling */
+            .sidebar {
+                background-color: var(--primary);
+                color: var(--white);
+                padding: 40px 30px;
+            }
+
+            .sidebar h2 {
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                border-bottom: 2px solid var(--accent);
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+                margin-top: 30px;
+            }
+
+            .contact-info p {
+                margin-bottom: 10px;
+                font-size: 0.9rem;
+                word-break: break-all;
+            }
+
+            .tech-category {
+                margin-bottom: 20px;
+            }
+
+            .tech-category h3 {
+                font-size: 0.95rem;
+                color: var(--accent);
+                margin-bottom: 8px;
+            }
+
+            .tech-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+
+            .tag {
+                background: rgba(255, 255, 255, 0.1);
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-size: 0.8rem;
+            }
+
+            /* Main Content Styling */
+            .main-content {
+                padding: 40px;
+            }
+
+            .header {
+                border-bottom: 2px solid var(--border);
+                padding-bottom: 20px;
+                margin-bottom: 30px;
+            }
+
+            .header h1 {
+                font-size: 2.5rem;
+                color: var(--primary);
+                margin-bottom: 5px;
+            }
+
+            .header .title {
+                font-size: 1.2rem;
+                color: var(--accent);
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            section {
+                margin-bottom: 35px;
+            }
+
+            h2.section-title {
+                font-size: 1.4rem;
+                color: var(--primary);
+                border-left: 5px solid var(--accent);
+                padding-left: 15px;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+            }
+
+            .summary p {
+                margin-bottom: 10px;
+                text-align: justify;
+            }
+
+            .experience-item,
+            .project-item {
+                margin-bottom: 25px;
+            }
+
+            .item-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                margin-bottom: 8px;
+            }
+
+            .item-header h3 {
+                font-size: 1.1rem;
+                color: var(--secondary);
+            }
+
+            .date {
+                font-size: 0.9rem;
+                font-weight: bold;
+                color: #777;
+            }
+
+            ul {
+                margin-left: 20px;
+                font-size: 0.95rem;
+            }
+
+            li {
+                margin-bottom: 5px;
+            }
+
+            .project-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .project-card {
+                background: #f9f9f9;
+                padding: 15px;
+                border-radius: 6px;
+                border: 1px solid var(--border);
+            }
+
+            .project-card h4 {
+                color: var(--accent);
+                margin-bottom: 5px;
+            }
+
+            .edu-item h3 {
+                font-size: 1rem;
+                margin-bottom: 2px;
+            }
+
+            /* Print Optimization */
+            @media print {
+                body {
+                    padding: 0;
+                    background: none;
+                }
+                .resume-container {
+                    box-shadow: none;
+                    grid-template-columns: 280px 1fr;
+                }
+                .sidebar {
+                    background-color: #eee !important;
+                    color: #333 !important;
+                }
+                .tag {
+                    border: 1px solid #ccc;
+                    color: #333;
+                }
+                .sidebar h2 {
+                    color: #333;
+                    border-bottom: 2px solid #333;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .resume-container {
+                    grid-template-columns: 1fr;
+                }
+                .sidebar {
+                    order: 2;
+                }
+                .project-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="resume-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="contact-info">
+                    <h2>Contact</h2>
+                    <p>📧 naresh.davra@gmail.com</p>
+                    <p>📱 +91 9099156714</p>
+                    <p>
+                        🔗
+                        <a
+                            style="
+                                text-decoration: none;
+                                color: inherit;
+                                underline: none;
+                            "
+                            href="https://linkedin.com/in/naresh-davra-54270742"
+                            >linkedin.com/in/naresh-davra-54270742</a
+                        >
+                    </p>
+                    <p>📍 India / Remote</p>
+                </div>
+
+                <div class="skills">
+                    <h2>Technologies</h2>
+
+                    <div class="tech-category">
+                        <h3>Languages</h3>
+                        <div class="tech-tags">
+                            <span class="tag">Javascript</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">Golang</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">Rust</span>
+                            <span class="tag">C</span>
+                            <span class="tag">ShellScript</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3>Cloud & Tools</h3>
+                        <div class="tech-tags">
+                            <span class="tag">AWS Cloud</span>
+                            <span class="tag">Google Cloud</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">Terraform</span>
+                            <span class="tag">Serverless</span>
+                            <span class="tag">Github CI/CD</span>
+                            <span class="tag">Kong API</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3>Data Stores</h3>
+                        <div class="tech-tags">
+                            <span class="tag">Postgres</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Redis</span>
+                            <span class="tag">DynamoDB</span>
+                            <span class="tag">Clickhouse</span>
+                            <span class="tag">Redshift</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3>Frameworks</h3>
+                        <div class="tech-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Nest.js</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">Express.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education">
+                    <h2>Education</h2>
+                    <div class="edu-item">
+                        <h3>Dharmsinh Desai University</h3>
+                        <p>B.E. Information Technology</p>
+                        <p class="date">2009 - 2012</p>
+                    </div>
+                    <div class="edu-item" style="margin-top: 15px">
+                        <h3>Mahavir Jain</h3>
+                        <p>Diploma in IT</p>
+                        <p class="date">2006 - 2009</p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <header class="header">
+                    <h1>Naresh Davra</h1>
+                    <p class="title">
+                        Sr Software Engineer / Full Stack Architect
+                    </p>
+                </header>
+
+                <section class="summary">
+                    <h2 class="section-title">Professional Summary</h2>
+                    <p>
+                        Sr Full stack developer with over 13 years of experience
+                        in design, architecture, and technical leadership.
+                        Expert in building tailored solutions for startups
+                        focusing on MVP using Serverless/CDK, AWS Lambda, and
+                        GraphQL.
+                    </p>
+                    <p>
+                        Proven track record in modernizing legacy systems with
+                        Cloud Native Microservice Architecture and Distributed
+                        Systems. Specialized in containerized SaaS deployments
+                        and multi-tenant systems with metered billing.
+                    </p>
+                </section>
+
+                <section class="experience">
+                    <h2 class="section-title">Experience</h2>
+
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <h3>
+                                Sr Software Engineer | LEAD Group, Bangalore
+                            </h3>
+                            <span class="date">Nov 2021 – Present</span>
+                        </div>
+                        <ul>
+                            <li>
+                                Enhanced platform experience for 1 million
+                                students and 30,000 teaching staff across 3,000
+                                schools.
+                            </li>
+                            <li>
+                                Spearheaded a Sales Acceleration Tool that
+                                streamlined complex business rules, resulting in
+                                faster sales cycles and smoother ordering.
+                            </li>
+                            <li>
+                                Reduced cloud costs significantly by migrating
+                                encrypted content delivery from Object storage
+                                to CDN on NAS devices.
+                            </li>
+                            <li>
+                                Optimized APIs through rigorous load testing and
+                                Node.js profiling.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <h3>CTO | Appstonelab, Surat</h3>
+                            <span class="date">Oct 2018 – Dec 2020</span>
+                        </div>
+                        <ul>
+                            <li>
+                                Founded a service-based company, streamlining
+                                hiring, training, and CI/CD pipelines.
+                            </li>
+                            <li>
+                                Led an IoT project for monitoring sensor data
+                                from commercial institutions, handling massive
+                                event storage and analytics.
+                            </li>
+                            <li>
+                                Developed backends for multi-coin crypto wallets
+                                including Bitcoin and Ethereum.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <h3>Sr Software Engineer | Spacecode, Mumbai</h3>
+                            <span class="date">Oct 2012 – Oct 2018</span>
+                        </div>
+                        <ul>
+                            <li>
+                                Integrated RFID scanners for offshore clients
+                                like GIA and the healthcare industry.
+                            </li>
+                            <li>
+                                Created an SDK for RFID devices to simplify
+                                integration with mobile and ERP systems.
+                            </li>
+                            <li>
+                                Built a SaaS inventory management solution and
+                                mentored junior developers.
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="projects">
+                    <h2 class="section-title">Key Projects</h2>
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <h4>Genie</h4>
+                            <p>
+                                Virtual classroom for students using Serverless
+                                Node.js, React, and DynamoDB.
+                            </p>
+                        </div>
+                        <div class="project-card">
+                            <h4>Enterprise Screener</h4>
+                            <p>
+                                COVID-era health monitoring app built with MERN
+                                stack, Flutter, and Docker.
+                            </p>
+                        </div>
+                        <div class="project-card">
+                            <h4>Vault Wallet</h4>
+                            <p>
+                                MQTT-based crypto backend using Node.js,
+                                Postgres, and AWS ECS.
+                            </p>
+                        </div>
+                        <div class="project-card">
+                            <h4>Smart Access Cabinet</h4>
+                            <p>
+                                Real-time RFID inventory solution with LED-tag
+                                filtering, deployed on GCP.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="leadership">
+                    <h2 class="section-title">Leadership & Collaboration</h2>
+                    <ul>
+                        <li>
+                            Collaborate across domains to drive architectural
+                            goals and technical feasibility for product
+                            roadmaps.
+                        </li>
+                        <li>
+                            Manage engineering budgets, cloud infrastructure
+                            costs, and recruitment planning.
+                        </li>
+                        <li>
+                            Guide engineers' career growth through mentorship
+                            and technical performance reviews.
+                        </li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
