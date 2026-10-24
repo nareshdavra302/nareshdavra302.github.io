@@ -7,7 +7,7 @@ Disallow: /_next/
 Disallow: /graphql
 
 # Sitemap location
-Sitemap: https://cv.jarocki.me/sitemap.xml
+Sitemap: https://nareshdavra302.github.io/sitemap.xml
 
 # Crawl-delay for responsible crawling
 Crawl-delay: 1
